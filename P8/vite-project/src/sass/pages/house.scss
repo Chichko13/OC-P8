@@ -1,0 +1,136 @@
+.house {
+  display: flex;
+  gap: 1.56rem;
+  color: $red;
+  margin-bottom: 3.12rem;
+  &__carrousel {
+    width: 77.5rem;
+    height: 25.9375rem;
+    object-fit: cover;
+    @include big-radius;
+    @include phone {
+      width: 20.9375rem;
+      height: 15.9rem;
+      margin: auto;
+    }
+    &--container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    &--counter {
+      position: absolute;
+      left: 37.94rem;
+      bottom: 1.56rem;
+      color: white;
+      font-size: 1.125rem;
+      @include phone {
+        display: none;
+      }
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include phone {
+      flex-direction: column;
+      align-items: normal;
+      margin: auto;
+    }
+    &--text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.31rem;
+    }
+  }
+  &__host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.62rem;
+    @include phone {
+      flex-direction: row-reverse;
+      gap: 6.1rem;
+      margin-top: 1rem;
+      & svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &--container {
+      display: flex;
+      align-items: center;
+      gap: 0.62rem;
+    }
+    &--p {
+      width: 5.81rem;
+      text-align: right;
+      @include phone {
+        font-size: 0.9rem;
+      }
+    }
+    &--img {
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      @include phone {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  &__tags {
+    border: 1px solid $red;
+    height: 1.5625rem;
+    color: white;
+    background-color: $red;
+    @include medium_radius;
+    padding: 0 12px;
+    line-height: 22px;
+    &--container {
+      display: flex;
+      gap: 0.62rem;
+      &--stars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+  &__collapse {
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    column-gap: 4.75rem;
+    @include phone {
+      grid-template-columns: none;
+      width: 20.9rem;
+      height: 1.875rem;
+      margin: auto;
+    }
+  }
+}
+.arrow__left {
+  cursor: pointer;
+  position: absolute;
+  top: 9.33rem;
+  left: 1.46rem;
+  @include phone {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 7.25rem;
+    left: 0;
+  }
+}
+.arrow__right {
+  cursor: pointer;
+  position: absolute;
+  top: 9.33rem;
+  right: 1.46rem;
+  @include phone {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 7.25rem;
+    right: 0;
+  }
+}

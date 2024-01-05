@@ -1,0 +1,40 @@
+.banner {
+  @include big-radius;
+  height: 13.9375rem;
+  position: relative;
+  color: white;
+  @include phone {
+    height: 6.9rem;
+    width: 20.9rem;
+    margin: auto;
+  }
+  &__img {
+    @include big-radius;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    margin-left: auto;
+    margin-right: auto;
+    top: 4.87rem;
+    left: 17.06rem;
+    position: absolute;
+    text-align: center;
+    font-size: 3rem;
+    @include phone {
+      font-size: 1.5rem;
+      left: 1rem;
+      top: 1.94rem;
+    }
+  }
+  &__ombre {
+    @include big-radius;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+}

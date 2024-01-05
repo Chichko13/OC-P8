@@ -1,0 +1,54 @@
+.collapse {
+  color: white;
+  background-color: $red;
+  display: flex;
+  justify-content: space-between;
+  @include medium_radius;
+  padding: 0.62rem 1.25rem 0.62rem 0.94rem;
+  height: 3.25rem;
+  width: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.88rem;
+    margin: auto;
+    width: 63.9rem;
+    @include phone {
+      width: 20.93rem;
+    }
+  }
+
+  &__content--close {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: $red;
+  }
+  &__content--open {
+    color: $red;
+    max-height: 20rem;
+    transition: max-height 0.8s ease;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+  }
+
+  &__svg--open {
+    transform: rotate(-180deg);
+    transition: transform 0.8s ease;
+    cursor: pointer;
+  }
+  &__svg--close {
+    transform: rotate(0deg);
+    transition: transform 0.8s ease;
+    cursor: pointer;
+  }
+  &__title {
+    font-size: 1.5rem;
+  }
+}

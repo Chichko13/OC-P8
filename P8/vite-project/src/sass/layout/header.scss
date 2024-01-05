@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  max-width: 77.5rem;
+  margin-top: 2.81rem;
+  margin-bottom: 3.12rem;
+  @include phone {
+    justify-content: space-around;
+  }
+  &__nav {
+    display: flex;
+    gap: 3.56rem;
+    font-size: 1.5rem;
+    @include phone {
+      font-size: 0.75rem;
+      gap: 1.62rem;
+    }
+  }
+  &__svg {
+    @include phone {
+      width: 9.06rem;
+      height: 2.93rem;
+    }
+  }
+}

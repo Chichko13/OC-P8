@@ -1,0 +1,18 @@
+@mixin big-radius {
+  border-radius: 1.5625rem;
+}
+@mixin medium_radius {
+  border-radius: 0.625rem;
+}
+
+@mixin phone {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
