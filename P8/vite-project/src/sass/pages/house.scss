@@ -3,16 +3,31 @@
   gap: 1.56rem;
   color: $red;
   margin-bottom: 3.12rem;
+  @include desktop {
+    width: 92%;
+  }
+  @include phone {
+    margin-bottom: 1.69rem;
+  }
   &__carrousel {
     width: 77.5rem;
     height: 25.9375rem;
     object-fit: cover;
     @include big-radius;
+    @include large-desktop {
+      margin: auto;
+      width: 100%;
+    }
+    @include tablet {
+      width: 100%;
+      height: 15.9rem;
+    }
     @include phone {
       width: 20.9375rem;
       height: 15.9rem;
       margin: auto;
     }
+
     &--container {
       position: relative;
       height: 100%;
@@ -24,7 +39,8 @@
       bottom: 1.56rem;
       color: white;
       font-size: 1.125rem;
-      @include phone {
+
+      @include desktop {
         display: none;
       }
     }
@@ -33,15 +49,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @include phone {
       flex-direction: column;
       align-items: normal;
       margin: auto;
     }
+
     &--text {
       display: flex;
       flex-direction: column;
       gap: 0.31rem;
+      & h1 {
+        font-size: 2.25rem;
+        @include tablet {
+          font-size: 1.125rem;
+        }
+      }
+      & p {
+        font-size: 1.125rem;
+        @include tablet {
+          font-size: 0.875rem;
+        }
+      }
     }
   }
   &__host {
@@ -49,14 +79,16 @@
     flex-direction: column;
     align-items: center;
     gap: 0.62rem;
-    @include phone {
-      flex-direction: row-reverse;
-      gap: 6.1rem;
-      margin-top: 1rem;
+    @include tablet {
       & svg {
         width: 18px;
         height: 18px;
       }
+    }
+    @include phone {
+      flex-direction: row-reverse;
+      gap: 6.1rem;
+      margin-top: 1rem;
     }
     &--container {
       display: flex;
@@ -74,6 +106,10 @@
       border-radius: 50%;
       width: 4rem;
       height: 4rem;
+      @include tablet {
+        width: 3rem;
+        height: 3rem;
+      }
       @include phone {
         width: 2rem;
         height: 2rem;
@@ -88,6 +124,10 @@
     @include medium_radius;
     padding: 0 12px;
     line-height: 22px;
+    font-size: 0.875rem;
+    @include tablet {
+      font-size: 0.625rem;
+    }
     &--container {
       display: flex;
       gap: 0.62rem;
@@ -102,11 +142,21 @@
     display: grid;
     grid-template: auto / 1fr 1fr;
     column-gap: 4.75rem;
+    @include tablet {
+      column-gap: 3rem;
+    }
     @include phone {
       grid-template-columns: none;
       width: 20.9rem;
-      height: 1.875rem;
       margin: auto;
+      gap: 1.25rem;
+    }
+    & h4 {
+      font-size: 1.125rem;
+      margin: auto 0;
+      @include tablet {
+        font-size: 0.812rem;
+      }
     }
   }
 }
@@ -115,7 +165,7 @@
   position: absolute;
   top: 9.33rem;
   left: 1.46rem;
-  @include phone {
+  @include tablet {
     width: 1.5rem;
     height: 1.5rem;
     top: 7.25rem;
@@ -127,7 +177,7 @@
   position: absolute;
   top: 9.33rem;
   right: 1.46rem;
-  @include phone {
+  @include tablet {
     width: 1.5rem;
     height: 1.5rem;
     top: 7.25rem;

@@ -5,17 +5,17 @@
   font-size: 1.5rem;
   padding-top: 4.12rem;
   padding-bottom: 1.81rem;
-  @include phone {
+  @include tablet {
     padding-bottom: 3.62rem;
   }
   &__svg {
     margin-bottom: 1.78rem;
-    @include phone {
+    @include tablet {
       margin-bottom: 0.5rem;
     }
   }
   &__text {
-    @include phone {
+    @include tablet {
       font-size: 0.75rem;
       width: 7.3rem;
       margin: auto;

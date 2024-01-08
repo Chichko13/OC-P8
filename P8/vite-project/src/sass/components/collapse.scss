@@ -7,48 +7,81 @@
   padding: 0.62rem 1.25rem 0.62rem 0.94rem;
   height: 3.25rem;
   width: 100%;
+  z-index: 2;
+  grid-column: 1/-1;
   &__container {
     display: flex;
     flex-direction: column;
     gap: 1.88rem;
     margin: auto;
     width: 63.9rem;
+    @include large-desktop {
+      width: 78%;
+    }
     @include phone {
       width: 20.93rem;
     }
   }
-
   &__content--close {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin-top: 1rem;
+    transition: all 0.3s ease;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 1.25rem;
     color: $red;
+    background-color: $grey;
+    grid-row: 2/-1;
+    grid-column: 1/-1;
   }
   &__content--open {
     color: $red;
     max-height: 20rem;
-    transition: max-height 0.8s ease;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin-top: 1rem;
+    transition: all 0.3s ease;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 2.18rem;
     font-size: 1.25rem;
+    background-color: $grey;
+    padding-bottom: 1.25rem;
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+    border-radius: 0 0 0.31rem 0.31rem;
+    & p {
+      @include tablet {
+        font-size: 0.75rem;
+      }
+    }
   }
 
   &__svg--open {
     transform: rotate(-180deg);
-    transition: transform 0.8s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
   }
   &__svg--close {
     transform: rotate(0deg);
-    transition: transform 0.8s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
   }
   &__title {
     font-size: 1.5rem;
+    @include tablet {
+      font-size: 0.8125rem;
+      margin: auto 0;
+    }
   }
+  &__text {
+    @include tablet {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.collapse__container--grid {
+  position: relative;
+  display: grid;
+  grid-template: 2.63rem 0.62rem auto / auto;
 }

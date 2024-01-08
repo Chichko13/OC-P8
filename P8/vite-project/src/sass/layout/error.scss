@@ -6,17 +6,45 @@
   margin-top: 8.69rem;
   margin-bottom: 8.69rem;
   color: $red;
+  @include tablet {
+    gap: 7.0625rem;
+    margin-top: 7.0625rem;
+    margin-bottom: 7.0625rem;
+  }
   &__title {
     font-size: 18rem;
-    @include phone {
+    @include desktop {
+      font-size: 14rem;
+    }
+    @include tablet {
       font-size: 6rem;
     }
   }
   &__text {
     font-size: 2.25rem;
-    @include phone {
+    & br {
+      display: none;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+    @include tablet {
       font-size: 1.125rem;
       text-align: center;
     }
+    @include phone {
+      & br {
+        display: inline;
+      }
+    }
   }
+  & a {
+    font-size: 1.125rem;
+    @include tablet {
+      font-size: 0.875rem;
+    }
+  }
+}
+.active {
+  text-decoration: underline;
 }

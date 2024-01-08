@@ -6,11 +6,11 @@ function Collapse({ item }) {
     setOpen(!open);
   };
   return (
-    <div>
+    <div className="collapse__container--grid">
       <div className="collapse" key={item.id}>
         <h4 className="collapse__title">{item.title}</h4>
         <svg
-          className={`${open ? "collapse__svg--open" : "collapse__svg-close"}`}
+          className={`${open ? "collapse__svg--open" : "collapse__svg--close"}`}
           onClick={toggleOpen}
           width="32"
           height="33"
@@ -30,8 +30,8 @@ function Collapse({ item }) {
         }`}
       >
         {Array.isArray(item.content) ? (
-          /* vérifie si tableau*/ item.content.map((equipment, index) => (
-            <p className="collapse__text">{equipment}</p>
+          /* vérifie si tableau*/ item.content.map((equipment) => (
+            <p>{equipment}</p>
           ))
         ) : (
           /*si pas tableau*/ <p className="collapse__text">{item.content}</p>
